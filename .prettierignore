@@ -1,0 +1,15 @@
+# Fichiers à ignorer par Prettier
+node_modules/
+dist/
+build/
+.git/
+*.log
+yarn.lock
+package-lock.json
+.env
+.env.*
+.prettierrc
+.prettierignore
+.gitignore
+*.css
+public/

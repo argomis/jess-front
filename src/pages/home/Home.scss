@@ -1,0 +1,64 @@
+@use '../../styles/variables.scss' as *;
+
+.home {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+
+  &__container {
+    text-align: center;
+    padding: var(--spacing-xl);
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: calc(var(--border-radius) * 2);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+  }
+
+  &__title {
+    font-size: 4rem;
+    font-weight: bold;
+    color: var(--primary);
+    margin-bottom: var(--spacing-lg);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+    letter-spacing: 0.1em;
+  }
+
+  &__subtitle {
+    font-size: var(--font-size-lg);
+    color: var(--on-surface);
+    margin: 0 0 var(--spacing-xl) 0;
+    opacity: 0.8;
+  }
+
+  &__form {
+    width: 100%;
+    max-width: 400px;
+  }
+
+  &__siret-preview {
+    margin: var(--spacing-md) 0;
+    padding: var(--spacing-sm);
+    background-color: var(--primary-background);
+    color: var(--on-primary-background);
+    border-radius: var(--border-radius);
+    font-size: var(--font-size-sm);
+    text-align: center;
+  }
+
+  &__submit {
+    width: 100%;
+    margin-top: var(--spacing-md);
+    padding: var(--spacing-md) var(--spacing-lg);
+    font-size: var(--font-size-base);
+
+    &:disabled {
+      background-color: var(--on-surface-background);
+      border-color: var(--on-surface-background);
+      cursor: not-allowed;
+      opacity: 0.6;
+    }
+  }
+}
