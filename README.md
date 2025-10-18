@@ -1,6 +1,6 @@
-# OPPBTP DUER - Front
+# Jess
 
-Application web frontend pour le projet OPPBTP DUER, construite avec React, TypeScript et Vite.
+Application web frontend pour le projet Jess, construite avec React, TypeScript et Vite.
 
 ## Stack technique
 

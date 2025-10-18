@@ -1,4 +1,4 @@
-# OPPBTP DUER - Front
+# Jess - Front
 
 Je souhaite créer un front web qui communiquera avec un n8n via des webhooks.
 Je souhaite la stack technique suivante :

@@ -1,8 +1,13 @@
 {
-  "name": "oppbtp-duer-front",
+  "name": "jess",
   "private": true,
   "version": "0.0.0",
   "type": "module",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:argomis/jess.git"
+  },
+  "homepage": "https://github.com/argomis/jess",
   "scripts": {
     "dev": "vite",
     "build": "tsc -b && vite build",

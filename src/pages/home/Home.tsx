@@ -16,8 +16,8 @@ export const Home = () => {
   return (
     <div className='home'>
       <div className='home__container'>
-        <h1 className='home__title'>DUER</h1>
-        <p className='home__subtitle'>Bienvenue sur l'application OPPBTP DUER</p>
+        <h1 className='home__title'>Jess</h1>
+        <p className='home__subtitle'>Bienvenue sur l'application Jess</p>
 
         <form onSubmit={handleSubmit} className='home__form'>
           <Input
