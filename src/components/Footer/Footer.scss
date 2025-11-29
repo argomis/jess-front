@@ -1,0 +1,54 @@
+@use '../../styles/variables.scss' as *;
+
+.footer {
+  background: var(--primary);
+  color: var(--on-primary);
+  padding: var(--spacing-lg) 0;
+  margin-top: auto;
+
+  &__container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 var(--spacing-lg);
+
+    @media (max-width: 768px) {
+      padding: 0 var(--spacing-md);
+    }
+  }
+
+  &__content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    @media (max-width: 768px) {
+      flex-direction: column;
+      gap: var(--spacing-sm);
+      text-align: center;
+    }
+
+    p {
+      margin: 0;
+      font-size: var(--font-size-sm);
+    }
+  }
+
+  &__link {
+    background: none;
+    border: none;
+    color: var(--on-primary);
+    font-size: var(--font-size-sm);
+    cursor: pointer;
+    text-decoration: underline;
+    opacity: 0.8;
+    transition: opacity 0.3s ease;
+
+    &:hover {
+      opacity: 1;
+    }
+
+    @media (max-width: 768px) {
+      margin-top: var(--spacing-xs);
+    }
+  }
+}

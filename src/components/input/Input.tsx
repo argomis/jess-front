@@ -22,12 +22,12 @@ export const Input = ({ label, value, onChange, placeholder, type = 'text', patt
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const newValue = e.target.value
 
-    // Validation avec pattern si fourni
+    // Validation with pattern if provided
     if (pattern && newValue && !new RegExp(pattern).test(newValue)) {
       return
     }
 
-    // Validation personnalisée si fournie
+    // Custom validation if provided
     if (onValidate && newValue && !onValidate(newValue)) {
       return
     }

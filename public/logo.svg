@@ -1,0 +1,17 @@
+<svg width="120" height="60" viewBox="0 0 120 60" xmlns="http://www.w3.org/2000/svg">
+  <!-- Fond -->
+  <rect width="120" height="60" fill="#ffffff" rx="8"/>
+
+  <!-- Cercle décoratif -->
+  <circle cx="20" cy="30" r="12" fill="#dc3545" opacity="0.8"/>
+
+  <!-- Initiales JF -->
+  <text x="20" y="37" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="white">JF</text>
+
+  <!-- Texte Jessica FEDER -->
+  <text x="38" y="22" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#dc3545">Jessica</text>
+  <text x="38" y="36" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#dc3545">FEDER</text>
+
+  <!-- Sous-titre -->
+  <text x="38" y="50" font-family="Arial, sans-serif" font-size="8" fill="#666">Infirmière DE</text>
+</svg>

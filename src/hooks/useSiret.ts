@@ -5,7 +5,7 @@ export const validateSiret = (siret: string): boolean => {
   // Suppression des espaces et tirets
   const cleanSiret = siret.replace(/[\s-]/g, '')
 
-  // Vérification de la longueur (14 chiffres)
+  // Length verification (14 digits)
   if (!/^\d{14}$/.test(cleanSiret)) {
     return false
   }
@@ -15,10 +15,10 @@ export const validateSiret = (siret: string): boolean => {
   for (let i = 0; i < 14; i++) {
     let digit = parseInt(cleanSiret[i])
 
-    // Les positions paires (en partant de 0) sont multipliées par 2
+    // Even positions (starting from 0) are multiplied by 2
     if (i % 2 === 0) {
       digit *= 2
-      // Si le résultat est supérieur à 9, on soustrait 9
+      // If result is greater than 9, subtract 9
       if (digit > 9) {
         digit -= 9
       }
@@ -51,7 +51,7 @@ export const useSiret = () => {
     const cleanValue = cleanSiretInput(value)
     setSiret(cleanValue)
 
-    // Validation en temps réel
+    // Real-time validation
     if (cleanValue.length === 14) {
       if (validateSiret(cleanValue)) {
         setError('')

@@ -1,13 +1,13 @@
 import { apiClient } from '../api'
 
-// Service pour les webhooks n8n
+// Service for n8n webhooks
 export class WebhookService {
   static async sendWebhook(endpoint: string, data: unknown) {
     try {
       const response = await apiClient.post(endpoint, { json: data })
       return response.json()
     } catch (error) {
-      console.error("Erreur lors de l'envoi du webhook:", error)
+      console.error("Error sending webhook:", error)
       throw error
     }
   }
@@ -17,7 +17,7 @@ export class WebhookService {
       const response = await apiClient.post(endpoint, { body: formData })
       return response.json()
     } catch (error) {
-      console.error("Erreur lors de l'envoi du formulaire:", error)
+      console.error("Error sending form data:", error)
       throw error
     }
   }

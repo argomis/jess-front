@@ -1,22 +1,22 @@
-// URLs et endpoints
+// URLs and endpoints
 export const API_ENDPOINTS = {
   WEBHOOKS: '/webhooks',
   HEALTH: '/health',
 } as const
 
-// Messages d'erreur
+// Error messages
 export const ERROR_MESSAGES = {
-  NETWORK_ERROR: 'Erreur de connexion au serveur',
-  VALIDATION_ERROR: 'Données invalides',
-  UNAUTHORIZED: 'Non autorisé',
-  FORBIDDEN: 'Accès interdit',
-  NOT_FOUND: 'Ressource non trouvée',
-  SERVER_ERROR: 'Erreur interne du serveur',
+  NETWORK_ERROR: 'Server connection error',
+  VALIDATION_ERROR: 'Invalid data',
+  UNAUTHORIZED: 'Unauthorized',
+  FORBIDDEN: 'Access forbidden',
+  NOT_FOUND: 'Resource not found',
+  SERVER_ERROR: 'Internal server error',
 } as const
 
-// Messages de succès
+// Success messages
 export const SUCCESS_MESSAGES = {
-  DATA_SAVED: 'Données sauvegardées avec succès',
-  DATA_UPDATED: 'Données mises à jour avec succès',
-  DATA_DELETED: 'Données supprimées avec succès',
+  DATA_SAVED: 'Data saved successfully',
+  DATA_UPDATED: 'Data updated successfully',
+  DATA_DELETED: 'Data deleted successfully',
 } as const

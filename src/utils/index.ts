@@ -20,12 +20,12 @@ export const formatDateTime = (date: Date | string, locale = 'fr-FR'): string =>
   })
 }
 
-// Fonction pour générer un ID unique
+// Function to generate a unique ID
 export const generateId = (): string => {
   return Math.random().toString(36).substring(2, 15) + Math.random().toString(36).substring(2, 15)
 }
 
-// Fonction pour débouncer les appels de fonction
+// Function to debounce function calls
 export const debounce = <T extends (...args: unknown[]) => void>(func: T, wait: number): T => {
   let timeout: number
   return ((...args: Parameters<T>) => {

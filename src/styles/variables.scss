@@ -1,16 +1,19 @@
 // Variables CSS globales
 :root {
-  // Couleurs primaires
-  --primary: #007bff;
+  // Couleurs primaires - Palette vert d'eau/turquoise
+  --primary: #20b2aa;
+  --primary-dark: #1a8e87;
+  --primary-light: #a7e8e1;
   --on-primary: #ffffff;
-  --primary-background: #e3f2fd;
-  --on-primary-background: #1565c0;
+  --primary-background: #e6f9f7;
+  --on-primary-background: #0d5955;
 
-  // Couleurs secondaires
-  --secondary: #6c757d;
+  // Couleurs secondaires - Tons chauds
+  --secondary: #6f4e37;
+  --secondary-light: #a67c6a;
   --on-secondary: #ffffff;
-  --secondary-background: #f8f9fa;
-  --on-secondary-background: #495057;
+  --secondary-background: #f5f1ed;
+  --on-secondary-background: #5d4037;
 
   // Couleurs de surface
   --surface: #ffffff;
