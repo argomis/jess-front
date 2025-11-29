@@ -16,11 +16,13 @@ yarn install
 cp .env.example .env
 # Éditer .env et configurer VITE_API_URL=http://localhost:3001/api
 
-# 4. Lancer le serveur de développement
+# 4. Lancer le serveur de développement (hot reload activé)
 yarn dev
 ```
 
 Le site sera accessible sur **http://localhost:5173**
+
+✨ **Hot Reload activé !** Vite recharge automatiquement la page à chaque modification de code.
 
 **⚠️ Important :** L'API doit être démarrée (voir [jess-api](https://github.com/argomis/jess-api))
 

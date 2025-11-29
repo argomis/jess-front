@@ -5,9 +5,10 @@ services:
     container_name: jess-front-dev
     working_dir: /app
     ports:
-      - "5173:5173"
+      - "5273:5273"
     environment:
-      - VITE_API_URL=http://localhost:3001/api
+      - VITE_API_URL=http://localhost:3101/api
+      - VITE_PORT=5273
     volumes:
       - .:/app
       - /app/node_modules
