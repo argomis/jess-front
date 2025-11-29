@@ -4,15 +4,15 @@ services:
     build:
       context: .
       dockerfile: Dockerfile
-    container_name: jess-frontend
+    container_name: jess-front
     ports:
       - "80:80"
     environment:
       - VITE_API_URL=http://localhost:3002/api
     networks:
-      - jess-frontend-network
+      - jess-front-network
     restart: unless-stopped
 
 networks:
-  jess-frontend-network:
+  jess-front-network:
     driver: bridge

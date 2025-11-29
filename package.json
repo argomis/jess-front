@@ -1,13 +1,13 @@
 {
-  "name": "jessica-feder-soins-energetiques",
+  "name": "jess-front",
   "private": true,
   "version": "0.0.0",
   "type": "module",
   "repository": {
     "type": "git",
-    "url": "git@github.com:argomis/jess.git"
+    "url": "git@github.com:argomis/jess-front.git"
   },
-  "homepage": "https://github.com/argomis/jess",
+  "homepage": "https://github.com/argomis/jess-front",
   "scripts": {
     "dev": "vite",
     "build": "tsc -b && vite build",
@@ -15,7 +15,7 @@
     "preview": "vite preview",
     "format": "prettier --write .",
     "format:check": "prettier --check .",
-    "docker:build": "docker compose build",
+    "docker:build": "docker build -t jess-front .",
     "docker:up": "docker compose up -d",
     "docker:down": "docker compose down",
     "docker:logs": "docker compose logs -f",

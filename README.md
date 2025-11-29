@@ -1,27 +1,50 @@
 # Jessica FEDER - Soins énergétiques
 
-Site web professionnel pour Jessica FEDER, infirmière DE spécialisée dans les soins énergétiques (Reiki, harmonisation globale, kinésiologie animale), construit avec React, TypeScript et Vite.
+Site web professionnel pour Jessica FEDER, infirmière DE spécialisée dans les soins énergétiques (Reiki, harmonisation globale, kinésiologie animale).
 
-## Architecture
+## 🚀 Lancement rapide (Standalone)
 
-Ce projet fait partie d'un système composé de deux repositories :
+```bash
+# 1. Cloner le repository
+git clone git@github-argomis:argomis/jess-front.git
+cd jess-front
+
+# 2. Installer les dépendances
+yarn install
+
+# 3. Configurer l'API
+cp .env.example .env
+# Éditer .env et configurer VITE_API_URL=http://localhost:3001/api
+
+# 4. Lancer le serveur de développement
+yarn dev
+```
+
+Le site sera accessible sur **http://localhost:5173**
+
+**⚠️ Important :** L'API doit être démarrée (voir [jess-api](https://github.com/argomis/jess-api))
+
+## 🏗️ Architecture
+
+Ce projet fait partie de l'écosystème Jessica FEDER :
 
 - **Frontend** (ce repository) : Interface utilisateur React
-- **Backend API** : [jess-api](https://github.com/argomis/jess-api) - API Node.js avec PostgreSQL
+- **API** : [jess-api](https://github.com/argomis/jess-api) - Backend Node.js avec PostgreSQL
+- **Backoffice** : [jess-bo](https://github.com/argomis/jess-bo) - Interface d'administration
 
-## Stack technique
+## 📦 Stack technique
 
-- **ReactJS** - Bibliothèque UI
-- **Vite** - Outil de build
+- **React 19** - Bibliothèque UI
+- **Vite 7** - Outil de build ultra-rapide
 - **TypeScript** - Typage statique
 - **Yarn** - Gestionnaire de paquets
-- **Zustand** - Gestion d'état
-- **React Router DOM** - Navigation
-- **ky** - Client HTTP
-- **Prettier** - Formatage de code
+- **Zustand** - Gestion d'état légère
+- **React Router DOM** - Navigation SPA
+- **ky** - Client HTTP moderne
 - **SCSS** - Préprocesseur CSS
+- **Prettier** - Formatage de code
 
-## Structure du projet
+## 📁 Structure du projet
 
 ```
 src/
@@ -40,91 +63,70 @@ src/
 └── main.tsx         # Point d'entrée
 ```
 
-## Prérequis
+## 📋 Prérequis
+
+- **Node.js 20+**
+- **Yarn** ou **npm**
+- **API Backend** : [jess-api](https://github.com/argomis/jess-api) doit être démarrée
+
+## 🛠️ Installation et configuration
 
 ### Développement local
-- Node.js 20+
-- Yarn ou npm
-- [jess-api](https://github.com/argomis/jess-api) démarré
 
-### Développement Docker (Recommandé)
-- Docker
-- Docker Compose
-
-## Installation
-
-### Option 1 : Développement Docker (Recommandé)
-
-1. Clonez le repository :
+1. **Cloner et installer**
 ```bash
-git clone git@github.com:argomis/jess.git
-cd jess
-```
-
-2. Démarrez l'environnement de développement :
-```bash
-yarn docker:dev
-```
-
-Cela démarre le frontend sur `http://localhost:5173`
-
-**Note :** L'API backend doit être démarrée séparément. Voir [jess-api](https://github.com/argomis/jess-api)
-
-### Option 2 : Développement local
-
-1. Clonez le repository :
-```bash
-git clone git@github.com:argomis/jess.git
-cd jess
-```
-
-2. Installez les dépendances :
-```bash
+git clone git@github-argomis:argomis/jess-front.git
+cd jess-front
 yarn install
 ```
 
-3. Configurez les variables d'environnement :
+2. **Configurer l'environnement**
 ```bash
 cp .env.example .env
 ```
 
-## Configuration
-
-Configurez les variables dans `.env` :
-
+Fichier `.env` :
 ```env
-# URL de l'API backend
 VITE_API_URL=http://localhost:3001/api
 ```
 
-## Scripts disponibles
-
-### Développement Docker
-- `yarn docker:dev` - Démarre le conteneur de développement
-- `yarn docker:build` - Build l'image Docker de production
-- `yarn docker:up` - Démarre l'environnement de production
-- `yarn docker:down` - Arrête les conteneurs
-
-### Développement local
-- `yarn dev` - Démarre le serveur de développement
-- `yarn build` - Build de production
-- `yarn preview` - Prévisualise le build
-- `yarn lint` - Vérifie le code avec ESLint
-- `yarn format` - Formate le code avec Prettier
-- `yarn format:check` - Vérifie le formatage
-
-## Développement
-
-1. Assurez-vous que l'API backend est démarrée (voir [jess-api](https://github.com/argomis/jess-api))
-
-2. Démarrez le serveur de développement :
+3. **Lancer le serveur**
 ```bash
 yarn dev
 ```
 
-3. Ouvrez [http://localhost:5173](http://localhost:5173) dans votre navigateur
+### 🐳 Avec Docker (Alternative)
 
-## Communication avec l'API
+```bash
+# Démarrer
+yarn docker:dev
+
+# Arrêter
+yarn docker:dev-down
+
+# Voir les logs
+yarn docker:dev-logs
+```
+
+## 🎮 Scripts disponibles
+
+### Développement
+- `yarn dev` - Serveur de développement (http://localhost:5173)
+- `yarn build` - Build de production
+- `yarn preview` - Prévisualiser le build
+- `yarn lint` - Vérifier le code avec ESLint
+- `yarn format` - Formater avec Prettier
+- `yarn format:check` - Vérifier le formatage
+
+### Docker
+- `yarn docker:dev` - Démarrer en mode développement
+- `yarn docker:dev-down` - Arrêter les conteneurs
+- `yarn docker:dev-logs` - Voir les logs
+- `yarn docker:build` - Build l'image de production
+- `yarn docker:up` - Démarrer en production
+- `yarn docker:down` - Arrêter la production
+
+## 🔗 Communication avec l'API
 
 L'application communique avec l'API backend via le service `contactService` qui utilise la bibliothèque `ky` pour les requêtes HTTP.
 
@@ -143,7 +145,7 @@ await contactService.submitContact({
 })
 ```
 
-## Fonctionnalités
+## ✨ Fonctionnalités
 
 - ✅ Page d'accueil avec présentation professionnelle
 - ✅ Page prestations avec FAQ détaillée
@@ -153,28 +155,27 @@ await contactService.submitContact({
 - ✅ Mentions légales conformes RGPD
 - ✅ Intégration API pour sauvegarde contacts
 
-## Déploiement
+## 🚢 Déploiement
 
-### Production Docker
-```bash
-# Build l'image de production
-yarn docker:build
-
-# Démarre l'environnement de production
-yarn docker:up
-
-# Arrête l'environnement de production
-yarn docker:down
-```
-
-### Production locale
-Pour déployer en production :
-
-1. Buildez le projet :
+### Build de production
 ```bash
 yarn build
 ```
 
-2. Les fichiers de production seront dans le dossier `dist/`
+Les fichiers optimisés seront dans `dist/`
 
-3. Configurez votre serveur web pour servir les fichiers statiques et rediriger les routes vers `index.html`
+### Docker production
+```bash
+yarn docker:build
+yarn docker:up
+```
+
+## 🔗 Liens utiles
+
+- **API Backend** : [jess-api](https://github.com/argomis/jess-api)
+- **Backoffice** : [jess-bo](https://github.com/argomis/jess-bo)
+- **Documentation complète** : Voir le repository principal
+
+## 📄 Licence
+
+ISC
