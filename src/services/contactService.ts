@@ -1,15 +1,12 @@
-import ky from 'ky'
+import { api } from '../api/client'
 import type { ContactFormData, ContactSubmissionResponse, ApiResponse } from '../types/api'
-
-const API_BASE_URL = import.meta.env.VITE_API_URL || 'http://localhost:3001/api'
 
 export const contactService = {
   async submitContact(data: ContactFormData): Promise<ContactSubmissionResponse> {
     try {
-      const response = await ky
-        .post(`${API_BASE_URL}/contact`, {
-          json: data,
-          timeout: 10000
+      const response = await api
+        .post('contact', {
+          json: data
         })
         .json<ApiResponse<ContactSubmissionResponse>>()
 
