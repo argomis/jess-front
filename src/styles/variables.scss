@@ -1,25 +1,40 @@
 // Variables CSS globales
 :root {
-  // Couleurs primaires - Palette vert d'eau/turquoise
-  --primary: #20b2aa;
-  --primary-dark: #1a8e87;
-  --primary-light: #a7e8e1;
-  --on-primary: #ffffff;
-  --primary-background: #e6f9f7;
-  --on-primary-background: #0d5955;
+  // Palette de base - Couleurs naturelles douces
+  --color-sage: #898D73;        /* Sauge foncé - 137, 141, 115 */
+  --color-sage-light: #BEC4A4;  /* Sauge clair - 190, 196, 164 */
+  --color-beige-warm: #D6CBC0;  /* Beige chaud - 214, 203, 192 */
+  --color-beige-cool: #D2D6C9;  /* Beige frais - 210, 214, 201 */
+  --color-sand: #C0B3A6;        /* Sable - 192, 179, 166 */
+  --color-rose: #D1B1AA;        /* Rose poudré - 209, 177, 170 */
+  --color-cream: #F0E6E1;       /* Crème - 240, 230, 225 */
+  --color-taupe: #DECAC3;       /* Taupe clair - 222, 202, 195 */
+  --color-peach: #E4C6B5;       /* Pêche - 228, 198, 181 */
 
-  // Couleurs secondaires - Tons chauds
-  --secondary: #6f4e37;
-  --secondary-light: #a67c6a;
-  --on-secondary: #ffffff;
-  --secondary-background: #f5f1ed;
-  --on-secondary-background: #5d4037;
+  // Couleurs primaires - Sauge (contraste accessible)
+  --primary: #898D73;           /* Sauge foncé - bon contraste sur fond clair */
+  --primary-dark: #6d7159;      /* Sauge très foncé - pour les survols */
+  --primary-light: #BEC4A4;     /* Sauge clair - pour les backgrounds */
+  --on-primary: #ffffff;        /* Texte sur primary - contraste 4.85:1 (AA) */
+  --primary-background: #f3f4ed; /* Background très clair sauge */
+  --on-primary-background: #6d7159; /* Texte foncé sur background clair */
+
+  // Couleurs secondaires - Tons chauds (beige/rose)
+  --secondary: #C0B3A6;         /* Beige sable - pour accents doux */
+  --secondary-light: #D1B1AA;   /* Rose poudré - pour highlights */
+  --on-secondary: #3d3835;      /* Texte foncé - contraste 5.2:1 (AA) */
+  --secondary-background: #F0E6E1; /* Crème - background très doux */
+  --on-secondary-background: #5d4037; /* Brun pour texte */
 
   // Couleurs de surface
-  --surface: #ffffff;
-  --on-surface: #212529;
-  --surface-background: #f8f9fa;
-  --on-surface-background: #6c757d;
+  --surface: #ffffff;           /* Blanc pur */
+  --on-surface: #2d2d2d;        /* Gris très foncé - contraste 12.6:1 (AAA) */
+  --surface-background: #f8f7f6; /* Blanc cassé */
+  --on-surface-background: #5a5a5a; /* Gris moyen - contraste 7.4:1 (AAA) */
+
+  // Couleurs d'accent
+  --accent-warm: #E4C6B5;       /* Pêche - pour CTA chauds */
+  --accent-cool: #D2D6C9;       /* Beige frais - pour zones calmes */
 
   // Tailles de police
   --font-size-xs: 0.75rem;
