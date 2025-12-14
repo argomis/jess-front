@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { ImageViewer } from '../../components/ImageViewer'
+import { ImageViewer, Tarifs } from '../../components'
 import { contactService } from '../../services'
 import type { ContactFormData } from '../../types/api'
 import './Home.scss'
@@ -131,84 +131,53 @@ export const Home = () => {
         </div>
       </section>
 
-      <section className='schedule-locations'>
-        <div className='schedule-locations__container'>
-          <div className='schedule'>
+      <section className='schedule'>
+        <div className='schedule__container'>
+          <div className='schedule__content-box'>
             <h2 className='schedule__title'>Horaires d'accompagnement</h2>
             <div className='schedule__content'>
               <p>📅 Du lundi au vendredi : 8h - 20h</p>
               <p>📅 Et samedi matin sur demande</p>
             </div>
           </div>
-
-          <div className='locations'>
-            <h2 className='locations__title'>Lieux de consultation</h2>
-            <div className='locations__grid'>
-              <div className='location'>
-                <div className='location__image'>
-                  <img
-                    src='/jessica.jpg'
-                    alt='Cabinet Jessica FEDER Rixheim'
-                    onClick={() => openImageViewer('/jessica.jpg', 'Au cabinet')}
-                    style={{ cursor: 'pointer' }}
-                  />
-                </div>
-                <div className='location__info'>
-                  <h3>Au cabinet</h3>
-                  <p>🏢 7 rue de Habsheim 68170 Rixheim</p>
-                </div>
-              </div>
-              <div className='location'>
-                <div className='location__image'>
-                  <img
-                    src='/carte-rixheim.svg'
-                    alt='Carte déplacements 50km Rixheim'
-                    onClick={() => openImageViewer('/carte-rixheim.svg', 'Chez vous')}
-                    style={{ cursor: 'pointer' }}
-                  />
-                </div>
-                <div className='location__info'>
-                  <h3>Chez vous</h3>
-                  <p>🏠 Je me déplace jusqu'à 50km autour de Rixheim</p>
-                </div>
-              </div>
-            </div>
-          </div>
         </div>
       </section>
 
-      <section className='animals-section'>
-        <div className='animals-section__container'>
-          <h2 className='animals-section__title'>Mes compagnons qui m'inspirent</h2>
-          <div className='animals-section__grid'>
-            <div className='animal-card'>
-              <div className='animal-card__image'>
-                                <img
-                  src='/chien.jpg'
-                  alt='Chien'
-                  onClick={() => openImageViewer('/chien.jpg', 'Accompagnement des chiens')}
-                  style={{ cursor: 'pointer' }}
-                />
-              </div>
-              <div className='animal-card__content'>
-                <h3>Accompagnement des chiens</h3>
-                <p>Kinésiologie canine</p>
-              </div>
-            </div>
-            <div className='animal-card'>
-              <div className='animal-card__image'>
+      <section className='tarifs-locations-section'>
+        <div className='tarifs-locations-section__container'>
+          <div className='tarifs-locations-section__locations'>
+            <div className='location'>
+              <div className='location__image'>
                 <img
-                  src='/cheval.jpg'
-                  alt='Cheval'
-                  onClick={() => openImageViewer('/cheval.jpg', 'Accompagnement des chevaux')}
+                  src='/jessica.jpg'
+                  alt='Cabinet Jessica FEDER Rixheim'
+                  onClick={() => openImageViewer('/jessica.jpg', 'Au cabinet')}
                   style={{ cursor: 'pointer' }}
                 />
               </div>
-              <div className='animal-card__content'>
-                <h3>Accompagnement des chevaux</h3>
-                <p>Soins énergétiques équins</p>
+              <div className='location__info'>
+                <h3>Au cabinet</h3>
+                <p>🏢 7 rue de Habsheim 68170 Rixheim</p>
               </div>
             </div>
+            <div className='location'>
+              <div className='location__image'>
+                <img
+                  src='/carte-rixheim.svg'
+                  alt='Carte déplacements 50km Rixheim'
+                  onClick={() => openImageViewer('/carte-rixheim.svg', 'Chez vous')}
+                  style={{ cursor: 'pointer' }}
+                />
+              </div>
+              <div className='location__info'>
+                <h3>Chez vous</h3>
+                <p>🏠 Je me déplace jusqu'à 50km autour de Rixheim</p>
+              </div>
+            </div>
+          </div>
+
+          <div className='tarifs-locations-section__tarifs'>
+            <Tarifs />
           </div>
         </div>
       </section>

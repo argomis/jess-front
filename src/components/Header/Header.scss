@@ -9,9 +9,9 @@
   z-index: 100;
 
   &__container {
-    max-width: 1200px;
+    max-width: 1400px;
     margin: 0 auto;
-    padding: 0 var(--spacing-lg);
+    padding: 0 var(--spacing-md);
     display: flex;
     align-items: center;
     justify-content: flex-start;
@@ -68,7 +68,7 @@
 
     &:hover {
       color: var(--primary);
-      border-bottom: 1px solid rgba(220, 53, 69, 0.5);
+      border-bottom: 1px solid var(--primary-light);
     }
 
     &--active {
