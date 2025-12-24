@@ -1,0 +1,18 @@
+version: '3.4'
+
+services:
+  jess-front:
+    container_name: jess-front-production
+    networks:
+      - traefik_webgateway
+    labels:
+      - "traefik.enable=true"
+      - "traefik.http.routers.jess-front-production.service=jess-front-production"
+      - "traefik.http.routers.jess-front-production.rule=Host(`${DOMAIN:-jessica-feder.com}`) || Host(`www.${DOMAIN:-jessica-feder.com}`)"
+      - "traefik.http.routers.jess-front-production.entrypoints=websecure"
+      - "traefik.http.routers.jess-front-production.tls.certresolver=myresolver"
+      - "traefik.http.services.jess-front-production.loadbalancer.server.port=80"
+
+networks:
+  traefik_webgateway:
+    external: true

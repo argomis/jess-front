@@ -1,0 +1,10 @@
+services:
+  jess-front:
+    image: ghcr.io/${GITHUB_REPOSITORY_OWNER}/jess-front:${TAG:-latest}
+    container_name: jess-front-production
+    restart: always
+    logging:
+      driver: 'local'
+      options:
+        max-size: 100m
+        max-file: '5'
