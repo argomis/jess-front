@@ -63,11 +63,9 @@ jobs:
     steps:
       - name: Create env file
         run: |
-          cat > .env << 'EOF'
-          # Docker / GitHub Container Registry
-          GITHUB_REPOSITORY_OWNER=${{ github.repository_owner }}
+          cat > .env << EOF
           TAG=latest
-          
+
           # Domain
           DOMAIN=${{ vars.DOMAIN }}
           EOF
