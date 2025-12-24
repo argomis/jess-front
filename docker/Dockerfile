@@ -6,8 +6,10 @@ WORKDIR /app
 # Copy package files
 COPY package*.json ./
 
-# Install dependencies (remove package-lock to avoid musl issues with rollup)
-RUN rm -f package-lock.json && npm install
+# Install dependencies (clean install to avoid cache issues)
+RUN npm cache clean --force && \
+    npm install --include=dev && \
+    npm rebuild
 
 # Copy source code
 COPY . .
