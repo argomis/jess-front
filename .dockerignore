@@ -1,0 +1,49 @@
+# Dependencies
+node_modules/
+npm-debug.log
+yarn-error.log
+
+# Development
+.git/
+.github/
+.vscode/
+.idea/
+
+# Docker
+docker/
+docker-compose*.yml
+Dockerfile*
+.dockerignore
+
+# Environment
+.env
+.env.*
+!.env.example
+
+# Documentation
+*.md
+README*
+CHANGELOG*
+LICENSE
+PROMPT.md
+
+# Logs
+logs/
+*.log
+
+# Tests
+test/
+tests/
+*.test.ts
+*.test.tsx
+*.spec.ts
+*.spec.tsx
+
+# Build output (will be created during build)
+dist/
+build/
+
+# Misc
+.DS_Store
+.eslintrc*
+.prettierrc*
