@@ -6,10 +6,9 @@ WORKDIR /app
 # Copy package files
 COPY package*.json ./
 
-# Install dependencies (clean install to avoid cache issues)
-RUN npm cache clean --force && \
-    npm install --include=dev && \
-    npm rebuild
+# Install dependencies - workaround for rollup musl bug
+# Remove both package-lock and node_modules then fresh install
+RUN rm -rf node_modules package-lock.json && npm install
 
 # Copy source code
 COPY . .
