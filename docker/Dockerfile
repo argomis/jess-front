@@ -6,8 +6,8 @@ WORKDIR /app
 # Copy package files
 COPY package*.json ./
 
-# Install dependencies
-RUN npm install
+# Install dependencies (remove package-lock to avoid musl issues with rollup)
+RUN rm -f package-lock.json && npm install
 
 # Copy source code
 COPY . .
