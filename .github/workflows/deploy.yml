@@ -63,12 +63,14 @@ jobs:
     steps:
       - name: Create env file
         run: |
-          echo "# Docker / GitHub Container Registry" > .env
-          echo GITHUB_REPOSITORY_OWNER=${{ github.repository_owner }} >> .env
-          echo TAG=latest >> .env
-          echo "" >> .env
-          echo "# Domain" >> .env
-          echo DOMAIN=${{ vars.DOMAIN }} >> .env
+          cat > .env << 'EOF'
+          # Docker / GitHub Container Registry
+          GITHUB_REPOSITORY_OWNER=${{ github.repository_owner }}
+          TAG=latest
+          
+          # Domain
+          DOMAIN=${{ vars.DOMAIN }}
+          EOF
 
       - name: Checkout code for docker files
         uses: actions/checkout@v4
