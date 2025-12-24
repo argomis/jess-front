@@ -63,12 +63,9 @@ jobs:
     steps:
       - name: Create env file
         run: |
-          cat > .env << EOF
-          TAG=latest
-
-          # Domain
-          DOMAIN=${{ vars.DOMAIN }}
-          EOF
+          echo "GITHUB_REPOSITORY_OWNER=${{ github.repository_owner }}" > .env
+          echo "TAG=latest" >> .env
+          echo "DOMAIN=${{ vars.DOMAIN }}" >> .env
 
       - name: Checkout code for docker files
         uses: actions/checkout@v4
