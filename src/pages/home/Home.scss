@@ -84,6 +84,7 @@
     font-weight: bold;
     color: var(--primary);
     margin-bottom: var(--spacing-sm);
+    font-family: 'Caveat', cursive;
   }
 
   &__subtitle {
@@ -153,6 +154,7 @@
     text-align: center;
     border-bottom: 2px solid var(--primary-light);
     padding-bottom: var(--spacing-md);
+    font-family: 'Caveat', cursive;
   }
 
   &__content {

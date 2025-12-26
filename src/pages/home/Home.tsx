@@ -85,40 +85,56 @@ export const Home = () => {
             </div>
             <div className='presentation-card__content'>
               <h1 className='presentation-card__title'>Jessica FEDER</h1>
-              <p className='presentation-card__subtitle'>Infirmière diplômée d'Etat</p>
+              <p className='presentation-card__subtitle'>Kinésiologie & Reiki</p>
               <div className='presentation-card__social'>
-                <p>📱 Sur Facebook : jessica feder pro</p>
-                <p>✨ 25 ans d'expérience</p>
+                <p>Sur Facebook : jessica feder pro</p>
+                <p>25 ans d'expérience</p>
               </div>
               <div className='presentation-card__contact'>
-                <p className='presentation-card__email'>contact@jessica-feder.fr</p>
+                <p className='presentation-card__email'>contact@jessica-feder.com</p>
                 <p className='presentation-card__phone'>+33 6 52 50 25 66</p>
               </div>
               <div className='presentation-card__locations'>
-                <p>🏢 Cabinet : 7 rue de Habsheim 68170 Rixheim</p>
-                <p>🏠 Déplacements à domicile</p>
+                <p>Cabinet : 7 rue de Habsheim 68170 Rixheim</p>
+                <p>Déplacements à domicile</p>
               </div>
             </div>
           </div>
 
           <div className='about-card'>
-            <h2 className='about-card__title'>POUR ME CONNAÎTRE</h2>
+            <h2 className='about-card__title'>Pour me connaître</h2>
             <div className='about-card__content'>
               <p>
-                Je m'appelle Jessica Feder. Je suis une quadragénaire en couple et maman de
-                deux adolescents. Je suis la gardienne humaine d'une petite chatte, Tina, et de
-                Saïko, chienne berger australien miniature.
+                Je suis infirmière diplômée d'état depuis plus de 25 ans. J'ai principalement travaillé en milieu hospitalier dans des services de médecine physique et rééducation mais également dans un service de soins palliatifs. J'ai aussi travaillé dans le secteur médico-social auprès de personnes en situation de handicap. J'ai délivré des soins techniques et relationnels tout en ayant à cœur de toujours personnaliser mon approche : chacun étant unique.
               </p>
               <p>
-                Je suis infirmière de formation depuis plus de 25 ans. J'ai principalement travaillé en
-                milieu hospitalier dans des services de médecine physique et rééducation.
+                Mon expérience personnelle, ainsi que mon parcours en tant qu'infirmière et encadrante d'équipes soignantes, m'ont permis de constater que, quel que soit l'état de santé, le soutien, la capacité à gérer le stress et les émotions, ainsi qu'une présence bienveillante, sont essentiels pour mener une vie épanouissante.
+              </p>
+              <p>
+                J'ai également pris conscience que les animaux, tout comme les êtres humains, ont besoin de bienveillance, d'écoute et de soutien pour vivre en équilibre. C'est pourquoi j'ai à cœur de les accompagner eux aussi, avec la même attention et la même présence.
+              </p>
+              <p>
+                C'est au fil du temps que l'évidence de développer des soins individuels à la personne comme à l'animal, en utilisant des techniques de médecine douce, s'est imposée à moi.
+              </p>
+              <p>
+                Je suis aujourd'hui kinésiologue animalier certifiée, après avoir suivi une formation professionnelle à l'école EKIVIE à Strasbourg.
+              </p>
+              <p>
+                <strong>Formations additionnelles hors kinésiologie :</strong>
+              </p>
+              <ul>
+                <li>REIKI niveau II (Formatrice Maitre Reiki Alicia Constantin)</li>
+                <li>Harmonisation globale (Formatrice Fancello Cécile)</li>
+                <li>Points gâchettes ou de relâchement (Formatrice Charlotte Welsch)</li>
+              </ul>
+              <p>
+                <strong>Aujourd'hui, je propose des soins :</strong>
               </p>
               <div className='about-card__services'>
-                <h3>Aujourd'hui, j'ai la possibilité de proposer des soins :</h3>
                 <div className='about-card__skills'>
                   <div className='skill'>
                     <h4>Pour les humains</h4>
-                    <p>Soin énergétique Reiki (niveau 2), pratique d'Harmonisation globale</p>
+                    <p>Soin énergétique Reiki (niveau II), pratique d'Harmonisation globale</p>
                   </div>
                   <div className='skill'>
                     <h4>Pour les animaux</h4>
@@ -126,6 +142,9 @@ export const Home = () => {
                   </div>
                 </div>
               </div>
+              <p>
+                <em>Ces pratiques sont des compléments d'accompagnement et ne remplacent en aucun cas l'avis médical ou vétérinaire.</em>
+              </p>
             </div>
           </div>
         </div>
