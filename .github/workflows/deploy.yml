@@ -51,7 +51,7 @@ jobs:
           tags: ${{ steps.meta.outputs.tags }}
           labels: ${{ steps.meta.outputs.labels }}
           build-args: |
-            VITE_API_URL=http://jess-api-production:3002
+            VITE_API_URL=/api
           cache-from: type=gha
           cache-to: type=gha,mode=max
 
