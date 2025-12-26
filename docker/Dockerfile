@@ -14,7 +14,7 @@ RUN rm -rf node_modules package-lock.json && npm install
 COPY . .
 
 # Build argument pour l'URL de l'API
-ARG VITE_API_URL=http://jess-api-production:3002
+ARG VITE_API_URL=https://api.jessica-feder.com/api
 ENV VITE_API_URL=$VITE_API_URL
 
 # Build the application
