@@ -39,8 +39,12 @@ export const Home = () => {
                   <p>25 ans d'expérience</p>
                 </div>
                 <div className='presentation-card__contact'>
-                  <p className='presentation-card__email'>contact@jessica-feder.com</p>
-                  <p className='presentation-card__phone'>+33 6 52 50 25 66</p>
+                  <p className='presentation-card__email'>
+                    <a href='mailto:contact@jessica-feder.com'>contact@jessica-feder.com</a>
+                  </p>
+                  <p className='presentation-card__phone'>
+                    <a href='tel:+33652502566'>+33 6 52 50 25 66</a>
+                  </p>
                 </div>
                 <div className='presentation-card__locations'>
                   <p>Cabinet : 7 rue de Habsheim 68170 Rixheim</p>
@@ -119,6 +123,7 @@ export const Home = () => {
       <section className='tarifs-locations-section'>
         <div className='tarifs-locations-section__container'>
           <div className='tarifs-locations-section__locations'>
+            <h2 className='locations-title'>Lieux de consultation :</h2>
             <div className='location'>
               <div className='location__image'>
                 <img
@@ -131,6 +136,7 @@ export const Home = () => {
               <div className='location__info'>
                 <h3>Au cabinet</h3>
                 <p>7 rue de Habsheim 68170 Rixheim</p>
+                <p>Ce lieu apaisant est fait pour vous permettre de vous exprimer, de laisser libre court à vos pensées et vous autoriser à exprimer vos émotions.</p>
               </div>
             </div>
             <div className='location'>
@@ -155,7 +161,8 @@ export const Home = () => {
               </div>
               <div className='location__info'>
                 <h3>Chez vous</h3>
-                <p>Je me déplace jusqu'à 50km autour de Rixheim</p>
+                <p>Je me déplace jusqu'à 50km autour de Rixheim.</p>
+                <p>J'ai commencé par me rendre à domicile pour l'accompagnement en kinésiologie animale. En effet, les animaux ont besoin d'être dans un environnement familier pour se sentir à l'aise. Cela facilite l'expression de leurs émotions pour traiter ce qui ne va pas. Il arrive à cette occasion que le gardien humain ait lui aussi envie d'être accompagné. C'est pourquoi je propose des soins à domicile pour les humains, qu'il y ait un animal ou non. Cette souplesse permet de réunir des conditions favorables à l'échange.</p>
                 <div className='location__legend'>
                   <div className='location__legend-item'>
                     <span className='location__legend-color location__legend-color--green'></span>
@@ -168,6 +175,7 @@ export const Home = () => {
                 </div>
               </div>
             </div>
+            <p className='locations-subtitle'>Quel que soit le lieu, je vous invite à la rencontre</p>
           </div>
 
           <div className='tarifs-locations-section__tarifs'>
