@@ -157,9 +157,9 @@ export const Home = () => {
           <div className='schedule__content-box'>
             <h2 className='schedule__title'>Horaires d'accompagnement :</h2>
             <div className='schedule__content'>
-              <p>📅 Du lundi au jeudi : 17h00-19h00</p>
-              <p>📅 Le vendredi : 9h00-19h00</p>
-              <p>📅 Le samedi : 09h00-14h00</p>
+              <p>Du lundi au jeudi : 17h00-19h00</p>
+              <p>Le vendredi : 9h00-19h00</p>
+              <p>Le samedi : 09h00-14h00</p>
             </div>
           </div>
         </div>
@@ -179,7 +179,7 @@ export const Home = () => {
               </div>
               <div className='location__info'>
                 <h3>Au cabinet</h3>
-                <p>🏢 7 rue de Habsheim 68170 Rixheim</p>
+                <p>7 rue de Habsheim 68170 Rixheim</p>
               </div>
             </div>
             <div className='location'>
@@ -204,7 +204,7 @@ export const Home = () => {
               </div>
               <div className='location__info'>
                 <h3>Chez vous</h3>
-                <p>🏠 Je me déplace jusqu'à 50km autour de Rixheim</p>
+                <p>Je me déplace jusqu'à 50km autour de Rixheim</p>
                 <div className='location__legend'>
                   <div className='location__legend-item'>
                     <span className='location__legend-color location__legend-color--green'></span>

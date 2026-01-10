@@ -9,7 +9,7 @@ export const Footer = ({ onNavigate }: FooterProps) => {
     <footer className='footer'>
       <div className='footer__container'>
         <div className='footer__content'>
-          <p>Copyright © 2025 | Made with ❤️ by Jessica FEDER</p>
+          <p>Copyright © 2025 | Made by Jessica FEDER</p>
           <button
             className='footer__link'
             onClick={() => onNavigate('mentions-legales')}

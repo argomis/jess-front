@@ -59,11 +59,11 @@ export const Tarifs = () => {
 
         <div className='tarifs__extras'>
           <div className='tarifs__extra-item'>
-            <p className='tarifs__extra-label'>🎁 Bon cadeau</p>
+            <p className='tarifs__extra-label'>Bon cadeau</p>
             <p className='tarifs__extra-description'>Possibilité de bon cadeau (paiement au cabinet ou par virement).</p>
           </div>
           <div className='tarifs__extra-item'>
-            <p className='tarifs__extra-label'>🚗 Déplacement</p>
+            <p className='tarifs__extra-label'>Déplacement</p>
             <p className='tarifs__extra-description'>En cas de déplacement dans un périmètre supérieur à 20km autour de Rixheim (et ce jusque 50 km), forfait de 10 € additionnel).</p>
           </div>
         </div>
