@@ -1,0 +1,1 @@
+export { MapRixheim } from './MapRixheim'

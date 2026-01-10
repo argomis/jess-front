@@ -1,11 +1,12 @@
 import { useState } from 'react'
 import { ImageViewer, Tarifs } from '../../components'
+import { MapRixheim } from '../../components/MapRixheim'
 import { contactService } from '../../services'
 import type { ContactFormData } from '../../types/api'
 import './Home.scss'
 
 export const Home = () => {
-  const [viewerImage, setViewerImage] = useState<{src: string, title: string} | null>(null)
+  const [viewerImage, setViewerImage] = useState<{src: string, title: string, extraContent?: React.ReactNode} | null>(null)
   const [contactForm, setContactForm] = useState<ContactFormData>({
     firstName: '',
     lastName: '',
@@ -19,9 +20,9 @@ export const Home = () => {
     message: string
   }>({ type: null, message: '' })
 
-  const openImageViewer = (imageSrc: string, title: string) => {
+  const openImageViewer = (imageSrc: string, title: string, extraContent?: React.ReactNode) => {
     console.log('Opening image viewer with:', imageSrc, title)
-    setViewerImage({src: imageSrc, title})
+    setViewerImage({src: imageSrc, title, extraContent})
   }
 
   const closeImageViewer = () => {
@@ -128,6 +129,7 @@ export const Home = () => {
                 <li>Points gâchettes ou de relâchement (Formatrice Charlotte Welsch)</li>
               </ul>
               <p>
+                <br />
                 <strong>Aujourd'hui, je propose des soins :</strong>
               </p>
               <div className='about-card__services'>
@@ -153,10 +155,11 @@ export const Home = () => {
       <section className='schedule'>
         <div className='schedule__container'>
           <div className='schedule__content-box'>
-            <h2 className='schedule__title'>Horaires d'accompagnement</h2>
+            <h2 className='schedule__title'>Horaires d'accompagnement :</h2>
             <div className='schedule__content'>
-              <p>📅 Du lundi au vendredi : 8h - 20h</p>
-              <p>📅 Et samedi matin sur demande</p>
+              <p>📅 Du lundi au jeudi : 17h00-19h00</p>
+              <p>📅 Le vendredi : 9h00-19h00</p>
+              <p>📅 Le samedi : 09h00-14h00</p>
             </div>
           </div>
         </div>
@@ -181,16 +184,37 @@ export const Home = () => {
             </div>
             <div className='location'>
               <div className='location__image'>
-                <img
-                  src='/carte-rixheim.svg'
-                  alt='Carte déplacements 50km Rixheim'
-                  onClick={() => openImageViewer('/carte-rixheim.svg', 'Chez vous')}
-                  style={{ cursor: 'pointer' }}
+                <MapRixheim
+                  onClick={(mapUrl) => openImageViewer(
+                    mapUrl,
+                    'Zone de déplacement',
+                    <div className='map-rixheim__legend'>
+                      <div className='map-rixheim__legend-item'>
+                        <span className='map-rixheim__legend-color map-rixheim__legend-color--green'></span>
+                        <span>20 km - Déplacement gratuit</span>
+                      </div>
+                      <div className='map-rixheim__legend-item'>
+                        <span className='map-rixheim__legend-color map-rixheim__legend-color--blue'></span>
+                        <span>50 km - Supplément de 10€</span>
+                      </div>
+                    </div>
+                  )}
+                  showLegend={true}
                 />
               </div>
               <div className='location__info'>
                 <h3>Chez vous</h3>
                 <p>🏠 Je me déplace jusqu'à 50km autour de Rixheim</p>
+                <div className='location__legend'>
+                  <div className='location__legend-item'>
+                    <span className='location__legend-color location__legend-color--green'></span>
+                    <span>20 km - Déplacement gratuit</span>
+                  </div>
+                  <div className='location__legend-item'>
+                    <span className='location__legend-color location__legend-color--blue'></span>
+                    <span>50 km - Supplément de 10€</span>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
@@ -279,6 +303,7 @@ export const Home = () => {
           imageSrc={viewerImage.src}
           altText={viewerImage.title}
           onClose={closeImageViewer}
+          extraContent={viewerImage.extraContent}
         />
       )}
     </div>

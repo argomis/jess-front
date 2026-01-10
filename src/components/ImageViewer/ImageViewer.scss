@@ -61,6 +61,13 @@
     animation: zoomIn 0.3s ease-out;
   }
 
+  &__extra-content {
+    position: absolute;
+    bottom: 80px;
+    right: 20px;
+    z-index: 1002;
+  }
+
   &__caption {
     color: var(--on-primary);
     background: rgba(0, 0, 0, 0.7);

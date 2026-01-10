@@ -1,0 +1,49 @@
+@use '../../styles/variables.scss' as *;
+
+.map-rixheim {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-md);
+
+  &__image {
+    width: 100%;
+    height: auto;
+    border-radius: var(--border-radius);
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+  }
+
+  &__legend {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-sm);
+    background: var(--surface);
+    padding: var(--spacing-md);
+    border-radius: var(--border-radius);
+    border-left: 4px solid var(--primary);
+  }
+
+  &__legend-item {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-sm);
+    font-size: var(--font-size-sm);
+    color: var(--text-primary);
+  }
+
+  &__legend-color {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    border: 2px solid currentColor;
+
+    &--green {
+      background-color: #34A853;
+      border-color: #34A853;
+    }
+
+    &--blue {
+      background-color: #4285F4;
+      border-color: #4285F4;
+    }
+  }
+}

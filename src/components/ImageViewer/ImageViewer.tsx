@@ -5,9 +5,10 @@ interface ImageViewerProps {
   imageSrc: string
   altText: string
   onClose: () => void
+  extraContent?: React.ReactNode
 }
 
-export const ImageViewer: React.FC<ImageViewerProps> = ({ imageSrc, altText, onClose }) => {
+export const ImageViewer: React.FC<ImageViewerProps> = ({ imageSrc, altText, onClose, extraContent }) => {
   useEffect(() => {
     const handleEscape = (e: KeyboardEvent) => {
       if (e.key === 'Escape') {
@@ -39,6 +40,11 @@ export const ImageViewer: React.FC<ImageViewerProps> = ({ imageSrc, altText, onC
           alt={altText}
           className='image-viewer__image'
         />
+        {extraContent && (
+          <div className='image-viewer__extra-content'>
+            {extraContent}
+          </div>
+        )}
         <div className='image-viewer__caption'>
           {altText}
         </div>
