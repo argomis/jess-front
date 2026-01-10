@@ -21,6 +21,7 @@
     @media (max-width: 768px) {
       flex-direction: column;
       align-items: stretch;
+      padding: 0 var(--spacing-md);
     }
   }
 
@@ -338,6 +339,10 @@
     display: flex;
     justify-content: center;
     padding: 0 var(--spacing-xl);
+
+    @media (max-width: 768px) {
+      padding: 0 var(--spacing-md);
+    }
   }
 
   &__content-box {
@@ -384,6 +389,7 @@
 
     @media (max-width: 968px) {
       flex-direction: column;
+      padding: 0 var(--spacing-md);
     }
   }
 
