@@ -11,7 +11,7 @@ export const Header = ({ currentPage, onNavigate }: HeaderProps) => {
       <div className='header__container'>
         <div className='header__logo' onClick={() => onNavigate('accueil')}>
           <img
-            src='/logo.png'
+            src='/logo.png?v=2'
             alt='Logo Jessica FEDER'
             className='header__logo-image'
           />
