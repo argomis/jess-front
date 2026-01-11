@@ -36,14 +36,29 @@ export const Home = () => {
               <div className='presentation-card__content'>
                 <h1 className='presentation-card__title'>Jessica FEDER</h1>
                 <p className='presentation-card__subtitle'>Kinésiologie & Reiki</p>
-                <div className='presentation-card__contact'>
-                  <p className='presentation-card__email'>
-                    <a href='mailto:contact@jessica-feder.com'>contact@jessica-feder.com</a>
-                  </p>
-                  <p className='presentation-card__phone'>
-                    <a href='tel:+33652502566'>+33 6 52 50 25 66</a>
+
+                <h3 className='presentation-card__contact-title'>Pour prendre rendez-vous :</h3>
+
+                <div className='presentation-card__contact-section'>
+                  <div className='presentation-card__contact-header'>
+                    <span className='presentation-card__contact-label'>Par téléphone au :</span>
+                    <a href='tel:+33652502566' className='presentation-card__link'>+33 6 52 50 25 66</a>
+                  </div>
+                  <p className='presentation-card__contact-details'>
+                    Je peux être en séance pendant votre appel aussi n'hésitez pas à laisser un message sur le répondeur ou à m'envoyer un SMS en indiquant vos coordonnées, votre besoin d'accompagnement (kinésiologie animale, reiki...) et/ou vos questions éventuelles.
                   </p>
                 </div>
+
+                <div className='presentation-card__contact-section'>
+                  <div className='presentation-card__contact-header'>
+                    <span className='presentation-card__contact-label'>Par mail :</span>
+                    <a href='mailto:contact@jessica-feder.com' className='presentation-card__link'>contact@jessica-feder.com</a>
+                  </div>
+                  <p className='presentation-card__contact-details'>
+                    Merci d'indiquer vos coordonnées téléphoniques, votre besoin d'accompagnement (kinésiologie animale, reiki...) et/ou vos questions éventuelles. Vous pouvez également m'indiquer quel mode de communication vous souhaitez que j'utilise pour vous contacter (mail ou SMS).
+                  </p>
+                </div>
+
                 <div className='presentation-card__locations'>
                   <p>Cabinet : 7 rue de Habsheim 68170 Rixheim</p>
                   <p>Déplacements à domicile</p>

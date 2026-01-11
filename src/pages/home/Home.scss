@@ -64,6 +64,10 @@
     text-align: center;
     position: relative;
     z-index: 1;
+
+    @media (max-width: 768px) {
+      padding: var(--spacing-xl) calc(var(--spacing-xl) / 2);
+    }
   }
 
   &__title {
@@ -95,46 +99,56 @@
     }
   }
 
-  &__contact {
+  &__contact-title {
+    font-size: 1.8rem;
+    color: var(--primary);
     margin-bottom: var(--spacing-lg);
-
-    p {
-      margin: var(--spacing-sm) 0;
-      color: var(--on-surface);
-      font-size: var(--font-size-base);
-    }
-  }
-
-  &__email {
+    font-family: 'Caveat', cursive;
     font-weight: 600;
-    color: var(--primary) !important;
+    text-align: center;
+  }
 
-    a {
-      color: var(--primary);
-      text-decoration: none;
-      transition: opacity 0.2s ease;
+  &__contact-section {
+    margin-bottom: var(--spacing-lg);
+  }
 
-      &:hover {
-        opacity: 0.7;
-        text-decoration: underline;
-      }
+  &__contact-header {
+    margin-bottom: var(--spacing-sm);
+    text-align: center;
+  }
+
+  &__contact-label {
+    display: block;
+    color: var(--on-surface);
+    font-size: var(--font-size-base);
+    font-weight: 600;
+    margin-bottom: var(--spacing-xs);
+  }
+
+  &__link {
+    color: var(--primary);
+    text-decoration: none;
+    font-weight: 600;
+    font-size: var(--font-size-lg);
+    transition: opacity 0.2s ease;
+
+    &:hover {
+      opacity: 0.7;
+      text-decoration: underline;
     }
   }
 
-  &__phone {
-    a {
-      color: var(--on-surface);
-      text-decoration: none;
-      transition: opacity 0.2s ease;
+  &__contact-details {
+    margin: 0;
+    padding: 0 var(--spacing-md);
+    color: var(--secondary);
+    font-size: var(--font-size-sm);
+    line-height: 1.6;
+    text-align: center;
+    margin-top: var(--spacing-lg);
+    padding-top: var(--spacing-md);
+    border-top: 1px solid var(--primary-light);
 
-      &:hover {
-        opacity: 0.7;
-        text-decoration: underline;
-      }
-    }
-  }
-
-  &__locations {
     p {
       margin: var(--spacing-xs) 0;
       color: var(--secondary);
