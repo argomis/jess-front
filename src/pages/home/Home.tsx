@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import { ImageViewer, Tarifs } from '../../components'
 import { MapRixheim } from '../../components/MapRixheim'
+import { FloatingLeaves } from '../../components/FloatingLeaves'
 import './Home.scss'
 
 export const Home = () => {
@@ -35,9 +36,6 @@ export const Home = () => {
               <div className='presentation-card__content'>
                 <h1 className='presentation-card__title'>Jessica FEDER</h1>
                 <p className='presentation-card__subtitle'>Kinésiologie & Reiki</p>
-                <div className='presentation-card__social'>
-                  <p>25 ans d'expérience</p>
-                </div>
                 <div className='presentation-card__contact'>
                   <p className='presentation-card__email'>
                     <a href='mailto:contact@jessica-feder.com'>contact@jessica-feder.com</a>
@@ -96,7 +94,28 @@ export const Home = () => {
                 </div>
               </div>
               <p>
-                Ces soins sont développés plus en détail dans les pages suivantes.
+                Ces soins sont développés plus en détail dans l'onglet{' '}
+                <a
+                  href="#prestations"
+                  onClick={(e) => {
+                    e.preventDefault()
+                    // Simuler un clic sur le bouton Prestations dans le header
+                    const prestationsButton = document.querySelector('[class*="header__nav-item"]:nth-child(2)') as HTMLButtonElement
+                    if (prestationsButton) {
+                      prestationsButton.click()
+                      window.scrollTo({ top: 0, behavior: 'smooth' })
+                    }
+                  }}
+                  style={{
+                    color: 'var(--primary)',
+                    textDecoration: 'underline',
+                    cursor: 'pointer',
+                    fontWeight: '500'
+                  }}
+                >
+                  prestations
+                </a>
+                .
               </p>
               <p>
                 Ces pratiques sont des compléments d'accompagnement et ne remplacent en aucun cas l'avis médical ou vétérinaire.
