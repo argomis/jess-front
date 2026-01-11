@@ -152,6 +152,10 @@
   border: 1px solid var(--primary-light);
   width: 100%;
 
+  @media (max-width: 768px) {
+    padding: var(--spacing-xl) calc(var(--spacing-xl) / 2);
+  }
+
   &__title {
     font-size: 2rem;
     color: var(--primary);
