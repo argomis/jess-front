@@ -55,15 +55,19 @@ Pour éviter toute utilisation frauduleuse :
 4. Ajoutez une carte bancaire (pour vérification uniquement)
 5. Activez le compte
 
-### 7. Ajouter la clé dans votre projet
+### 7. Ajouter la clé dans votre projet (Environnement local uniquement)
 
-1. Ouvrez le fichier `.env` dans `jess-front/`
+**IMPORTANT** : Le fichier `.env` ne doit JAMAIS être commité sur GitHub. Il est dans `.gitignore`.
+
+1. Créez un fichier `.env` dans `jess-front/` (si inexistant)
 2. Ajoutez votre clé :
    ```
    VITE_GOOGLE_MAPS_API_KEY=AIzaSyXxXxXxXxXxXxXxXxXxXxXxXxXxXxXxXxX
    ```
 3. Sauvegardez le fichier
 4. Redémarrez le serveur de développement
+
+**Pour la production** : La clé API est injectée automatiquement via GitHub Actions depuis les secrets du repository. Ne PAS mettre la clé dans `.env.production`.
 
 ### 8. Vérifier que ça fonctionne
 
@@ -106,12 +110,14 @@ Pour éviter toute utilisation frauduleuse :
 
 Pour le déploiement en production :
 
-1. Créez un fichier `.env.production` :
-   ```
-   VITE_API_URL=https://jessica-feder.com/api
-   VITE_GOOGLE_MAPS_API_KEY=votre_clé_api
-   ```
+1. La clé API Google Maps est déjà configurée dans les **GitHub Secrets** du repository
 
-2. Assurez-vous que `https://jessica-feder.com/*` est dans les restrictions
+2. GitHub Actions injecte automatiquement `VITE_GOOGLE_MAPS_API_KEY` lors du build
 
-3. Le fichier `.env` ne doit JAMAIS être commité dans Git (il est dans `.gitignore`)
+3. **Ne JAMAIS** commiter le fichier `.env` sur GitHub (il est dans `.gitignore`)
+
+4. Pour ajouter/modifier la clé en production :
+   - Allez dans Settings > Secrets and variables > Actions
+   - Ajoutez ou modifiez le secret `VITE_GOOGLE_MAPS_API_KEY`
+
+5. Assurez-vous que votre domaine de production est dans les restrictions de la clé API Google
